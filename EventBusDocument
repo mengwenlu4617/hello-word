@@ -1,0 +1,74 @@
+package com.android.sdk.eventbus;
+
+/**
+ * Created by lenovo on 2020/8/19.
+ */
+
+public class EventBusDocument {
+
+    /*三要素*/
+//    Event 事件它可以是任意类型。
+//    Subscriber 事件订阅者在EventBus3.0之前我们必须定义以onEvent开头的那几个方法，分别是onEvent、onEventMainThread、onEventBackgroundThread和onEventAsync，
+//    而在3.0之后事件处理的方法名可以随意取，不过需要加上注解@subscribe()，并且指定线程模型，默认是POSTING。
+//    Publisher 事件的发布者我们可以在任意线程里发布事件，一般情况下，使用EventBus.getDefault()就可以得到一个EventBus对象，然后再调用post(Object)方法即可
+
+    /*四种线程模式*/
+//    1、POSTING (默认) 表示事件处理函数的线程跟发布事件的线程在同一个线程
+//    2、MAIN 表示事件处理函数的线程在主线程(UI)线程，因此在这里不能进行耗时操作
+//    3、BACKGROUND 表示事件处理函数的线程在后台线程，因此不能进行UI操作。如果发布事件的线程是主线程(UI线程)；
+//       那么事件处理函数将会开启一个后台线程，如果果发布事件的线程是在后台线程，那么事件处理函数就使用该线程
+//    4、ASYNC 表示无论事件发布的线程是哪一个，事件处理函数始终会新建一个子线程运行，同样不能进行UI操作
+
+    /*用法*/
+//    创建实体类，发送的事件（自定义）
+//    public class MessageEvent{
+//        private String message;
+//        public  MessageEvent(String message){
+//            this.message=message;
+//        }
+//        public String getMessage() {
+//            return message;
+//        }
+//        public void setMessage(String message) {
+//            this.message = message;
+//        }
+//    }
+//    /*发送消息：注册事件、解除注册、处理事件*/
+//    注册事件
+//    @Override
+//    protected void onCreate(Bundle savedInstanceState) {
+//        super.onCreate(savedInstanceState);
+//        setContentView(R.layout.activity_main)；
+//        EventBus.getDefault().register(this)；
+//    }
+//    解除注册
+//    @Override
+//    protected void onDestroy() {
+//        super.onDestroy();
+//        EventBus.getDefault().unregister(this);
+//    }
+//    处理事件【 处理消息的方法名字可以随便取。但是需要加一个注解 @Subscribe，并且要指定线程模型 】
+//    @Subscribe(threadMode = ThreadMode.MAIN)
+//    public void XXX(MessageEvent messageEvent) {
+//     todo
+//    }
+//    发送事件
+//    EventBus.getDefault().post(messageEvent);
+
+    /*粘性事件*/
+//    使用场景：我们要把一个Event发送到一个还没有初始化的Activity/Fragment，
+// 即尚未订阅事件。那么如果只是简单的post一个事件，那么是无法收到的，这时候，你需要用到粘性事件,它可以帮你解决这类问题
+
+//    发送
+//    EventBus.getDefault().postSticky("RECOGNIZE_SONG");
+//    接收
+//    @Subscribe(threadMode = ThreadMode.MAIN, sticky = true)
+//    public void receiveSticky(String msg) {
+//        Log.e(TAG, "receiveSticky: " + msg);
+//        String s = EventBus.getDefault().getStickyEvent(String.class);
+//        if (s != null) {
+//            EventBus.getDefault().removeStickyEvent(s);
+//        }
+//    }
+
+}
