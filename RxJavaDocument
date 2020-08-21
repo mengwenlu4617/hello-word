@@ -193,33 +193,28 @@ public class RxJavaDocument {
 //}
     /*整体方法调用顺序：观察者.onSubscribe（）> 被观察者.subscribe（）> 观察者.onNext（）>观察者.onComplete()*/
 
-    private void testRxJava(){
+    几种主要的需求
 
-        Observable.create(new ObservableOnSubscribe<Integer>() {
-            @Override
-            public void subscribe(ObservableEmitter<Integer> e) throws Exception {
+直接创建一个Observable（创建操作）
+组合多个Observable（组合操作）
+对Observable发射的数据执行变换操作（变换操作）
+从Observable发射的数据中取特定的值（过滤操作）
+转发Observable的部分值（条件/布尔/过滤操作）
+对Observable发射的数据序列求值（算术/聚合操作）
+创建Observable的各种方式
 
-            }
-        }).subscribe(new Observer<Integer>() {
-            @Override
-            public void onSubscribe(Disposable d) {
+create()：使用一个函数从头创建一个Observable
+defer()：只有当订阅者订阅才创建Observable；为每个订阅创建一个新的 Observable
+empty() ：创建一个什么都不做直接通知完成的Observable
+never()：创建一个不发射任何数据的Observable
+error()：—创建一个什么都不做直接通知错误的Observable
+just()：将一个或多个对象转换成发射这个或这些对象的一个Observable
+from()：将一个Iterable, 一个Future, 或者一个数组转换成一个Observable
+repeat()：创建一个重复发射指定数据或数据序列的Observable
+repeatWhen() ：创建一个重复发射指定数据或数据序列的Observable，它依赖于另一 个Observable发射的数据
+repeatUntil()：根据条件（函数BooleanSupplier）判断是否需要继续订阅
+range()：创建一个发射指定范围的整数序列的Observable
+interval()：创建一个按照给定的时间间隔发射整数序列的Observable
+timer()：—创建一个在给定的延时之后发射单个数据的Observable
 
-            }
-
-            @Override
-            public void onNext(Integer value) {
-
-            }
-
-            @Override
-            public void onError(Throwable e) {
-
-            }
-
-            @Override
-            public void onComplete() {
-
-            }
-        });
-    }
 }
