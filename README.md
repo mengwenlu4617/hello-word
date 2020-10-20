@@ -7,3 +7,7 @@ https://book.flutterchina.club/
 maven { url 'https://maven.aliyun.com/repository/google' }
         maven { url 'https://maven.aliyun.com/repository/jcenter' }
         maven { url 'http://maven.aliyun.com/nexus/content/groups/public' }
+
+###异常
+
+java.lang.IllegalArgumentException
