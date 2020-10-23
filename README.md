@@ -9,5 +9,5 @@ maven { url 'https://maven.aliyun.com/repository/google' }
         maven { url 'http://maven.aliyun.com/nexus/content/groups/public' }
 
 ###异常
-
+## 非法数据
 java.lang.IllegalArgumentException
