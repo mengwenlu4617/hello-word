@@ -13,8 +13,8 @@ maven { url 'https://maven.aliyun.com/repository/google' }
 java.lang.IllegalArgumentException   
 非法访问异常
 
-###Flutter相关问题
-## 插件的版本比项目的版本高
+## Flutter相关问题
+### 1.插件的版本比项目的版本高
 Incompatible classes were found in dependencies. Remove them from the classpath or use '-Xskip-metadata-version-check' to suppress errors
 flutter Execution failed for task ‘:audioplayers:compileReleaseKotlin
 
