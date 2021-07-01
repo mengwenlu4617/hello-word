@@ -6,3 +6,7 @@ flutter Execution failed for task ‘:audioplayers:compileReleaseKotlin
 
 原因：插件的版本比项目的版本高
 解决办法：android->build.gradle文件，修改ext.kotlin_version = ‘1.5.10’
+
+### 2.布局出错
+The following assertion was thrown during performResize():
+Vertical viewport was given unbounded height.
