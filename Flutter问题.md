@@ -17,3 +17,9 @@ An InputDecorator, which is typically created by a TextField, cannot have an unb
 This happens when the parent widget does not provide a finite width constraint. For example, if the InputDecorator is contained by a Row, then its width must be constrained. An Expanded widget or a SizedBox can be used to constrain the width of the InputDecorator or the TextField that contains it.
 'package:flutter/src/material/input_decorator.dart':
 Failed assertion: line 948 pos 7: 'layoutConstraints.maxWidth < double.infinity'
+
+### 4.运行失败
+E/flutter (19425): [ERROR:flutter/shell/common/shell.cc(242)] Dart Error: Can't load Kernel binary: Invalid kernel binary: Indicated size is invalid.
+E/flutter (19425): [ERROR:flutter/runtime/dart_isolate.cc(169)] Could not prepare isolate.
+E/flutter (19425): [ERROR:flutter/runtime/runtime_controller.cc(401)] Could not create root isolate.
+E/flutter (19425): [ERROR:flutter/shell/common/shell.cc(571)] Could not launch engine with configuration.
