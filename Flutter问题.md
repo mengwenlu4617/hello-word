@@ -23,3 +23,6 @@ E/flutter (19425): [ERROR:flutter/shell/common/shell.cc(242)] Dart Error: Can't 
 E/flutter (19425): [ERROR:flutter/runtime/dart_isolate.cc(169)] Could not prepare isolate.
 E/flutter (19425): [ERROR:flutter/runtime/runtime_controller.cc(401)] Could not create root isolate.
 E/flutter (19425): [ERROR:flutter/shell/common/shell.cc(571)] Could not launch engine with configuration.
+
+### 5.Cannot provide both a color and a decoration
+布局不能同时设置背景和装饰
